@@ -19,36 +19,39 @@ public class Main {
 		
 		System.out.println("Helloworld");
 		
+		Generics g = new Generics();
+		g.print();
+		
 		
 		
 //		/*
-//		 * If super class constructor is private. Then there should be a
+//		 * If super class constructor is private. Then base class constructor with same parameter cannot be called or used to create object.
 //		 */
 //		
-//		BaseClassB b = new BaseClassB(3); //It can be called as parameterised constructor of base class is called in the first line of this constructor like super(5)
+//		BaseClassB b = new BaseClassB(3); //calling base class with super(5) //It can be called as parameterized constructor of base class is called in the first line of this constructor like super(5)
 //		//BaseClassB b = new BaseClassB(); //It cannot be called as default constructor of base class is private.
 //
 //		System.out.println(b.b);
 //		System.out.println(b.getA());
 		
 		
-		Logger logger = Logger.getLogger(Main.class.getName()); 
-		
-		try {
-			// FILE_SIZE = 1024, declared below main(), 5 files will be created, with size of each one set to 1024 bytes, with a specific pattern for file name and append set to true.
-			FileHandler handler = new FileHandler("sample.log", FILE_SIZE, 3, true);
-			
-			handler.setFormatter(new SimpleFormatter());
-			
-			logger.addHandler(handler);
-			
-			logger.setUseParentHandlers(false);
-			
-			logger.warning("Sample log entry.");
-			
-		}catch(IOException e) {
-			logger.warning("Failed to initialize logger handler.");
-		}
+//		Logger logger = Logger.getLogger(Main.class.getName()); 
+//		
+//		try {
+//			// FILE_SIZE = 1024, declared below main(), 5 files will be created, with size of each one set to 1024 bytes, with a specific pattern for file name and append set to true.
+//			FileHandler handler = new FileHandler("sample.log", FILE_SIZE, 3, true);
+//			
+//			handler.setFormatter(new SimpleFormatter());
+//			
+//			logger.addHandler(handler);
+//			
+//			logger.setUseParentHandlers(false);
+//			
+//			logger.warning("Sample log entry.");
+//			
+//		}catch(IOException e) {
+//			logger.warning("Failed to initialize logger handler.");
+//		}
 		
 //		/*
 //		 * Java.util.Logging, Java logger, how to use logging in java.
